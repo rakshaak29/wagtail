@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+<section class="custom-page-hero">
+    <h1>✨ Custom Content Blocks</h1>
+    <p>All your content blocks displayed beautifully on one page.</p>
+</section>
+
+<div class="custom-page-content">
+    {% for block in page.body %}
+        {{ block }}
+    {% endfor %}
+</div>
+
+{% endblock %}

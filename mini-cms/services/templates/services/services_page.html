@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+
+<h1>Services Page</h1>
+
+<hr>
+
+<p>DEBUG: Number of blocks = {{ home_body|length }}</p>
+
+{% for block in home_body %}
+    <p>BLOCK TYPE: {{ block.block_type }}</p>
+{% endfor %}
+
+{% endblock %}

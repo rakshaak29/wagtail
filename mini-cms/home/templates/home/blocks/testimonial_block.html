@@ -1,0 +1,17 @@
+{% load wagtailimages_tags %}
+
+<div class="testimonial-section">
+
+    {% if value.photo %}
+        {% image value.photo fill-200x200 as img %}
+        <img src="{{ img.url }}" alt="{{ value.name }}" class="testimonial-photo">
+    {% endif %}
+
+    <h3 class="testimonial-name">{{ value.name }}</h3>
+    <p class="testimonial-role">{{ value.role }}</p>
+
+    <blockquote class="testimonial-quote">
+        “{{ value.quote }}”
+    </blockquote>
+
+</div>

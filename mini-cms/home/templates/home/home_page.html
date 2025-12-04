@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+
+<!-- FULL HERO SECTION -->
+<section class="hero-big">
+    <h1 class="hero-title">✨ Welcome to Mini CMS</h1>
+    <p class="hero-subtitle">Build, edit and manage beautiful content blocks without coding.</p>
+
+    <div class="hero-buttons">
+        <a href="/custom-content-blocks/" class="btn-hero">📦 View Custom Blocks</a>
+        <a href="/admin/" class="btn-hero-outline">⚙️ Admin Panel</a>
+    </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="feature-section">
+    <div class="feature-card">
+        <h3>🧩 Easy Custom Blocks</h3>
+        <p>Create FAQs, CTAs, Testimonials — all editable from admin.</p>
+    </div>
+
+    <div class="feature-card">
+        <h3>🎨 Beautiful UI</h3>
+        <p>Responsive design, gradients, shadows and clean typography.</p>
+    </div>
+
+    <div class="feature-card">
+        <h3>⚡ Beginner Friendly</h3>
+        <p>Edit everything without touching code — perfect for beginners.</p>
+    </div>
+</section>
+
+<!-- RENDER CUSTOM STREAMFIELD BLOCKS -->
+<div class="custom-blocks-wrapper">
+    {% for block in page.body %}
+        {% include_block block %}
+    {% endfor %}
+</div>
+
+{% endblock %}

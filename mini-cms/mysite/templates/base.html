@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Mini CMS Demo{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Mini CMS – Wagtail Blocks Demo</h1>
+    </header>
+
+    <main class="main">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>Built by Raksha & Sarang</p>
+    </footer>
+
+</body>
+</html>
