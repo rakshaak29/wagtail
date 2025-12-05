@@ -28,8 +28,7 @@ class HomePage(Page):
 # CUSTOM BLOCKS PAGE
 # -----------------------------
 class CustomBlocksPage(Page):
-    template = "mini-cms/home/templates/home/custom_content_blocks_page.html.html"
-
+    template = "mini-cms/home/templates/home/custom_content_blocks_page.html" 
     body = StreamField(
         [
             ("faq", custom_blocks.FAQBlock()),
@@ -46,3 +45,4 @@ class CustomBlocksPage(Page):
 
     class Meta:
         verbose_name = "Custom Blocks Page"
+        

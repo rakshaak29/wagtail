@@ -8,8 +8,11 @@
 </section>
 
 <div class="custom-page-content">
-    {% for block in page.body %}
-        {{ block }}
+    <!-- Iterate over the 'blocks' list we created in the view -->
+    {% for block in blocks %}
+        {% include_block block %}
+    {% empty %}
+        <p style="text-align: center; padding: 2rem;">No blocks found on the Home Page.</p>
     {% endfor %}
 </div>
 
